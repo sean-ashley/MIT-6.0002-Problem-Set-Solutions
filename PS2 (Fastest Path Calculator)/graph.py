@@ -83,13 +83,13 @@ class Digraph(object):
         self.edges = {}  # must be a dict of Node -> list of edges
         self.edge_list = []
 
-    # def __str__(self):
-    #     edge_strs = []
-    #     for edges in self.edges.values():
-    #         for edge in edges:
-    #             edge_strs.append(str(edge))
-    #     edge_strs = sorted(edge_strs)  # sort alphabetically
-    #     return '\n'.join(edge_strs)  # concat edge_strs with "\n"s between them
+    def __str__(self):
+         edge_strs = []
+         for edges in self.edges.values():
+             for edge in edges:
+                 edge_strs.append(str(edge))
+         edge_strs = sorted(edge_strs)  # sort alphabetically
+         return '\n'.join(edge_strs)  # concat edge_strs with "\n"s between them
 
     def get_edges_for_node(self, node):
         return self.edges[node]
